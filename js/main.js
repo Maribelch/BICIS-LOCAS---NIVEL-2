@@ -1,4 +1,4 @@
-// desaparicion del nombre
+
 var span=document.createElement("span");
 function mensajeNombre(){
     var nom=document.getElementById("name");
@@ -14,7 +14,7 @@ function nombreAviso(){
 }
 
 
-//desaparicion del apellido
+
 var apeSpan=document.createElement("span");
 function mensajeApellido(){
     var apelli=document.getElementById("lastname");
@@ -28,7 +28,7 @@ function mensajeAviso(){
     apellido2.parentNode.appendChild(apeSpan2);  
 }
 
-//desaparicion del correo
+// correo
 var span3=document.createElement("span");
 function mensajeCorreo(){
     var email = document.getElementById("input-email"); 
@@ -36,7 +36,7 @@ function mensajeCorreo(){
     email.parentNode.appendChild(span3);
 }
 
-//desaparicion de la contraseña
+// contraseña
 var span4 =document.createElement("span");
 function  contrasenia (){
     var password = document.getElementById("input-password");
@@ -44,7 +44,7 @@ function  contrasenia (){
     password.parentNode.appendChild(span4);
 }
 
-//desaparcion del selec
+
 var span5=document.createElement("span");
 function mensajeSelec(){
     var opcione= document.querySelector("select");
@@ -52,7 +52,7 @@ function mensajeSelec(){
     opcione.parentNode.appendChild(span5);
 }
 
-//funcion general
+
 function validateForm()
 {
     var valiNombre = /^[a-zA-Z]*$/;
@@ -77,7 +77,7 @@ function validateForm()
         span4.style.display="none";
     }
     
-    //validando Nombre
+    
     if (!valiNombre.test(nombre))
     {
         mensajeNombre();
@@ -93,7 +93,7 @@ function validateForm()
         }  
     }
  
-  //validando Apellido
+  //va
     if (!valiNombre.test(apellido))
     {
         mensajeApellido();
@@ -108,7 +108,7 @@ function validateForm()
         }  
     }
     
-  //validando Correo
+  //vc
  if (!valiCorreo.test(correo)){
         mensajeCorreo();
         return false; 
@@ -116,7 +116,7 @@ function validateForm()
        span3.style.display="none";
     }
  
- //validando la contraseña
+ //vac
  if (contra.length<=6){
         contrasenia();
        
@@ -126,7 +126,7 @@ function validateForm()
     } 
    
     
-    // validando el selec opciones
+    // vo 
     if (selec ==0) {
        mensajeSelec();
         return false;
