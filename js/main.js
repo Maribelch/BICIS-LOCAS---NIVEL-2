@@ -1,5 +1,4 @@
-
-var span=document.createElement("span");
+/*var span=document.createElement("span");
 function mensajeNombre(){
     var nom=document.getElementById("name");
     span.innerHTML="escriba su nombre";
@@ -133,4 +132,59 @@ function validateForm()
     } else {
         span5.style.display="none";
     } 
-}
+}*/
+$(document).ready(function(){
+    $("#boton").click(function(){
+        var name =$("#name").val();
+        var surnames =$("#lastname").val();
+        var mail=$("#input-email").val();
+        var acode=$("#input-password").val();
+        
+         //decalarando una variable 
+        var eliminar =$("span");
+        for(var i=0; i<eliminar.length; i++){
+            eliminar[i].remove(eliminar[i]);
+        }
+    
+    if(name.length==0){
+        $(".name-container").append("<span>llene sus datos</span>");
+        //append sirve para crear un elemento hijo y lo agrega al final
+    }
+        if(surnames.length==0){
+            $(".lastname-container").append("<span>ingrese su apellido</span>");
+        }
+        if(mail.length==0){
+            $(".email-container").append("<span>ingrese su correo</span>");
+        }
+        if(acode.length==0){
+            $(".contrase").append("<span>ingrese su contraseña</span>");
+        }
+        //validacion de formulario
+        //Nombre
+        var noNumer=(/[0-9]/g).test(name);
+        if(noNumer==true){
+            $(".name-container").append("<span>La manera correcta es con letras</span>");
+            }
+        //Apellido
+        var noNume=(/[0-9]/g).test(surnames);
+        if(noNume==true){
+            $(".lastname-container").append("<span>La manera correcta es con letras</span>")
+        }
+        //correo
+        var noNum=(/^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i);
+        //!noNum.test(mail) cuando se adiferente a la variable noNun
+        if(!noNum.test(mail)){
+            $(".email-container").append("<span>verifique su correo</span>");
+        }
+        //contraseña
+            if(acode.length<=6){
+                $(".contrase").append("<span>su contraseña deve tener minimo 6 caracteres</span");
+            }
+        //eliminando span
+       
+        
+        });
+});
+
+
+

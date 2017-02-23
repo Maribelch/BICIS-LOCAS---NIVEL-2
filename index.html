@@ -1,5 +1,6 @@
 <html lang="es">
   <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +21,7 @@
           <h2 id="form-signup-heading">
             Bicis Locas
           </h2>
+          
           <div class="name-container input-box">
             <label for="name" class="sr-only">Nombre</label>
             <input type="text" id="name" class="form-control"
@@ -29,7 +31,7 @@
             <label for="lastname" class="sr-only">Apellido</label>
             <input type="text" id="lastname" class="form-control"
             placeholder="Ingrese su apellido" >
-            
+           
           </div>
           <div class="email-container input-box">
             <label for="inputEmail" class="sr-only">
@@ -37,7 +39,7 @@
             </label>
             <input type="email" id="input-email" class="form-control" placeholder="Ingrese su correo electrónico" autofocus="">
           </div>
-          <div class="form-group input-box">
+          <div class="form-group input-box contrase">
             <label for="inputPassword" class="sr-only">
               Contraseña
             </label>
@@ -62,7 +64,7 @@
               <span>Deseo recibir información vía email</span>
             </label>
           </div>
-          <button class="btn btn-lg btn-primary btn-block submit-btn" type="submit" onclick="validateForm()">Registrar</button>
+          <button class="btn btn-lg btn-primary btn-block submit-btn" type="submit"  id="boton">Registrar</button>
         </form>
       </div>  
     </section>
